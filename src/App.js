@@ -1,13 +1,18 @@
 import React from "react";
 import "./App.css";
+import Task from "./components/Task";
 
+const handleClick = () => {
+  return <Task />;
+};
 function App() {
   return (
     <div className="App">
       <h1>Bored?</h1>
       <form>
-        <button>Here's Your Cure</button>
+        <button onClick={() => handleClick}>Here's Your Cure</button>
       </form>
+      <Task />
     </div>
   );
 }

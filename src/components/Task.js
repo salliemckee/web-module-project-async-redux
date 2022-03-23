@@ -1,12 +1,14 @@
 import React from "react";
+import data from "./data";
 
 const Task = (props) => {
-  const { task } = props;
+  const task = data;
+  console.log(task);
   return (
     <div className="task">
-      <h3>May I Suggest: {task.activity}</h3>
-      <p>Category: {task.type}</p>
-      <p></p>
+      <h4>May I Suggest: {task[0].activity}</h4>
+      <p>Category: {task[0].type}</p>
+      <p>People Needed: {task[0].participants}</p>
     </div>
   );
 };
