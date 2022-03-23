@@ -1,16 +1,27 @@
 import React from "react";
 import data from "./data";
+import { getData } from "../actions";
+import { connect } from "react-redux";
 
 const Task = (props) => {
+  console.log(props);
   const task = data;
-  console.log(task);
+
   return (
     <div className="task">
-      <h4>May I Suggest: {task[0].activity}</h4>
-      <p>Category: {task[0].type}</p>
-      <p>People Needed: {task[0].participants}</p>
+      <h4>May I Suggest: {props.activity}</h4>
+      <p>Category: {props.type}</p>
+      <p>People Needed: {props.participants}</p>
     </div>
   );
 };
 
-export default Task;
+const mapStateToProps = (state) => {
+  return {
+    activity: state.data.activity,
+    type: state.data.type,
+    participants: state.data.participants,
+  };
+};
+
+export default connect(mapStateToProps)(Task);

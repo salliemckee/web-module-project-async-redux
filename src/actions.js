@@ -8,9 +8,9 @@ export const getData = () => (dispatch) => {
   dispatch({ type: FETCH_DATA_START });
   axios
     .get("https://www.boredapi.com/api/activity/")
-    .then(
-      (res) => console.log(res.data),
-      dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data })
-    )
+    .then((res) => {
+      console.log(res.data);
+      dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data });
+    })
     .catch((err) => dispatch({ type: FETCH_DATA_FAIL, payload: err }));
 };

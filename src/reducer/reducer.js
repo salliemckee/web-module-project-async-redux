@@ -3,10 +3,11 @@ import {
   FETCH_DATA_SUCCESS,
   FETCH_DATA_FAIL,
 } from "../actions";
+import data from "../components/data";
 
 const initialState = {
   data: {
-    activity: "",
+    activity: data[0].activity,
     type: "",
     participants: "",
   },
