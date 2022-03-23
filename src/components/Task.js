@@ -5,13 +5,13 @@ import { connect } from "react-redux";
 
 const Task = (props) => {
   console.log(props);
-  const task = data;
+  const { activity, type, participants } = props;
 
   return (
     <div className="task">
-      <h4>May I Suggest: {props.activity}</h4>
-      <p>Category: {props.type}</p>
-      <p>People Needed: {props.participants}</p>
+      <h4>May I Suggest: {activity}</h4>
+      <p>Category: {type}</p>
+      <p>People Needed: {participants}</p>
     </div>
   );
 };
