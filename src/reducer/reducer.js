@@ -7,7 +7,7 @@ import data from "../components/data";
 
 const initialState = {
   data: {
-    activity: data[0].activity,
+    activity: "",
     type: "",
     participants: "",
   },

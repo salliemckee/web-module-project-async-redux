@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <h1>Bored?</h1>
       <form>
-        <button>Here's Your Cure</button>
+        <button className="button">Here's Your Cure</button>
       </form>
       <Task />
     </div>

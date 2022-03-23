@@ -9,7 +9,9 @@ const Task = (props) => {
 
   return (
     <div className="task">
-      <h4>May I Suggest: {activity}</h4>
+      <h4>
+        May I Suggest: <br /> {activity}
+      </h4>
       <p>Category: {type}</p>
       <p>People Needed: {participants}</p>
     </div>
